@@ -4,31 +4,24 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    
 }
 
-/* Фоновое изображение для всего экрана */
-body {
-	background-image: url('https://media.istockphoto.com/id/1732963074/photo/starry-night-sky-in-space.jpg?s=612x612&w=0&k=20&c=AHcmpswk3g3toHSFt5yCV_1uzMZUaJl95p3UIgm8euo=');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	/*ffdf*/
-}
-
-/* Заголовок по центру сверху */
+/* Заголовок по правому краю сверху */
 h1 {
-    text-align: center;
+    text-align: right; /* Выровнять заголовок по правому краю */
     color: white; /* Цвет заголовка */
-    margin-top: 20px;
-    font-size: 2.5em;
+    margin: 5vh 2vw 0 0; /* Уменьшаем отступы сверху и снизу */
+    font-size: 4vw; /* Размер шрифта зависит от ширины окна просмотра */
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 
 /* Контейнер для двух колонок: левая с фото, правая с текстом */
 .content {
     display: flex;
-    height: calc(100% - 80px); /* Высота за вычетом места под заголовок */
-    margin-top: 20px;
+    margin-top: 10px; /* Уменьшаем отступ сверху */
     position: relative;
 }
 
@@ -45,7 +38,7 @@ h1 {
 .left img {
     height: 120%; /* Изображение занимает 150% высоты */
     position: absolute; /* Абсолютное позиционирование внутри фиксированного контейнера */
-    top: -200px; /* Поднимаем изображение на 50px выше */
+    top: -31vh; /* Поднимаем изображение выше */
     left: 0;
     margin: 0;
     padding: 0;
@@ -54,11 +47,14 @@ h1 {
 
 /* Правая колонка с текстом */
 .right {
-    flex: 1;
-    margin-left: 50%; /* Отступ справа, чтобы правая колонка не наезжала на левую */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+
+    text-align: right; /* Выровнять текст по правому краю */
+    color: #ccc; /* Светло-серый цвет для подзаголовка */
+    margin-right: 2vw; /* Отступ справа */
+    font-size: 1.8vw; /* Относительный размер шрифта */
+    font-style: Robotic; /* Курсив для текста */
+    margin-top: 1vh; /* Минимальный отступ сверху под заголовком */
+    margin-bottom: 10vh; /* Явный отступ снизу */
+    margin-left: 23vw; /* Отступ слева для текста */
 }
