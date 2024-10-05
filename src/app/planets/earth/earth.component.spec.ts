@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FirstPageComponent } from './first-page.component';
+import { EarthComponent } from './earth.component';
 
-describe('FirstPageComponent', () => {
-  let component: FirstPageComponent;
-  let fixture: ComponentFixture<FirstPageComponent>;
+describe('EarthComponent', () => {
+  let component: EarthComponent;
+  let fixture: ComponentFixture<EarthComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FirstPageComponent]
+      imports: [EarthComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(FirstPageComponent);
+    fixture = TestBed.createComponent(EarthComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

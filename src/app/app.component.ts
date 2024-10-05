@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { FirstPageComponent } from './first-page/first-page.component';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './shared/header/header.component';
 
 
 @Component({
-  selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FirstPageComponent],
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [RouterModule, HeaderComponent],
 })
 export class AppComponent {
-  title = 'project';
+  title = 'my-angular-app';
 }
