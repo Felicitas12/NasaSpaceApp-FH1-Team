@@ -1,0 +1,29 @@
+#header {
+	width: 39.9%;
+	height: 4.7%;
+	background-color: darkviolet;
+	margin: 0 auto;
+	/* Centers horizontally */
+	border-radius: 15px;
+	color: white;
+	font-family: Times New Roman;
+	text-align: center;
+}
+
+#content {
+	width: 65%;
+	font-family: monospace;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+	float: right;
+	margin-left: 1%;
+	margin-bottom: 5.6%;
+
+}
+
+#image {
+	width: 10%;
+	height: 10%;
+	float: left;
+	background-color: aqua;
+}
