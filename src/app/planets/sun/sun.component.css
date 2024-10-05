@@ -1,0 +1,64 @@
+/* Сбрасываем отступы и задаём 100% высоту для страницы */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Фоновое изображение для всего экрана */
+body {
+	background-image: url('https://media.istockphoto.com/id/1732963074/photo/starry-night-sky-in-space.jpg?s=612x612&w=0&k=20&c=AHcmpswk3g3toHSFt5yCV_1uzMZUaJl95p3UIgm8euo=');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/*ffdf*/
+}
+
+/* Заголовок по центру сверху */
+h1 {
+    text-align: center;
+    color: white; /* Цвет заголовка */
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+/* Контейнер для двух колонок: левая с фото, правая с текстом */
+.content {
+    display: flex;
+    height: calc(100% - 80px); /* Высота за вычетом места под заголовок */
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Левая колонка с изображением */
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Измените, чтобы изображение находилось в верхней части контейнера */
+    position: fixed;
+    height: 100vh;
+}
+
+.left img {
+    height: 120%; /* Изображение занимает 150% высоты */
+    position: absolute; /* Абсолютное позиционирование внутри фиксированного контейнера */
+    top: -200px; /* Поднимаем изображение на 50px выше */
+    left: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Правая колонка с текстом */
+.right {
+    flex: 1;
+    margin-left: 50%; /* Отступ справа, чтобы правая колонка не наезжала на левую */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
