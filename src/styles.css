@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url('https://media.istockphoto.com/id/1732963074/photo/starry-night-sky-in-space.jpg?s=612x612&w=0&k=20&c=AHcmpswk3g3toHSFt5yCV_1uzMZUaJl95p3UIgm8euo=');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
