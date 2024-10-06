@@ -1,0 +1,46 @@
+.planet {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 30%;
+}
+
+.image {
+  height: 90vh;
+}
+
+.right {
+  width: 70%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding-right: 32px;
+
+  color: #fff;
+}
+
+.line {
+  height: 1px;
+  background-color: #fff;
+}
+
+.title {
+  text-align: right; /* Выровнять заголовок по правому краю */
+  color: white; /* Цвет заголовка */
+  margin: 5vh 2vw 0 0; /* Уменьшаем отступы сверху и снизу */
+  font-size: 4vw; /* Размер шрифта зависит от ширины окна просмотра */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.text {
+  padding-top: 16px;
+
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: right; /* Выровнять текст по правому краю */
+  color: #ccc; /* Светло-серый цвет для подзаголовка */
+  font-size: 1.8vw; /* Относительный размер шрифта */
+}
