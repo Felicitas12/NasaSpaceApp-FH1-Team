@@ -118,7 +118,7 @@
   width: 20px;
   height: 20px;
   transform-origin: -65px 0;
-  animation: rotate 1.44s linear infinite;
+  animation: rotate 8.44s linear infinite;
 }
 
 .venus {
@@ -127,7 +127,7 @@
   width: 30px;
   height: 30px;
   transform-origin: -110px 0;
-  animation: rotate 1.94s linear infinite;
+  animation: rotate 8.94s linear infinite;
 }
 
 .earth {
@@ -136,7 +136,7 @@
   width: 30px;
   height: 30px;
   transform-origin: -160px 0;
-  animation: rotate 2.29s linear infinite;
+  animation: rotate 16.29s linear infinite;
 }
 
 .mars {
@@ -145,7 +145,7 @@
   width: 25px;
   height: 25px;
   transform-origin: -212.5px 0;
-  animation: rotate 2.82s linear infinite;
+  animation: rotate 16.82s linear infinite;
 }
 
 .jupiter {
@@ -154,7 +154,7 @@
   width: 50px;
   height: 50px;
   transform-origin: -250px 0;
-  animation: rotate 5.21s linear infinite;
+  animation: rotate 40.21s linear infinite;
 }
 
 .saturn {
@@ -163,7 +163,7 @@
   width: 45px;
   height: 45px;
   transform-origin: -302.5px 0;
-  animation: rotate 7.03s linear infinite;
+  animation: rotate 56.03s linear infinite;
 }
 
 .uranus {
@@ -173,7 +173,7 @@
   width: 40px;
   height: 40px;
   transform-origin: -355px 0;
-  animation: rotate 10s linear infinite;
+  animation: rotate 80s linear infinite;
 }
 
 .neptune {
@@ -182,7 +182,7 @@
   width: 40px;
   height: 40px;
   transform-origin: -405px 0;
-  animation: rotate 12.54s linear infinite;
+  animation: rotate 96.54s linear infinite;
 }
 @keyframes rotate {
   from {
