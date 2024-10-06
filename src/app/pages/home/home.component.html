@@ -3,7 +3,20 @@
 -->
 
 <div class="solar-system">
-  <div class="orbit mercury-orbit"></div>
+    <div class="sun">
+        <a href="sun" routerLink="/sun" routerLinkActive="active">
+            <img src="../../../assets/images/planets/sun.png" alt="Sun" />
+        </a>
+    </div>
+
+  <div class="orbit mercury-orbit">
+      <div class="planet mercury">
+          <a href="mercury" routerLink="/mercury" routerLinkActive="active">
+              <img src="../../../assets/images/planets/mercury.png" alt="Mercury" />
+          </a>
+      </div>
+  </div>
+
   <div class="orbit venus-orbit"></div>
   <div class="orbit earth-orbit"></div>
   <div class="orbit mars-orbit"></div>
@@ -12,16 +25,8 @@
   <div class="orbit uranus-orbit"></div>
   <div class="orbit neptune-orbit"></div>
 
-  <div class="sun">
-    <a href="sun" routerLink="/sun" routerLinkActive="active">
-      <img src="../../../assets/images/planets/sun.png" alt="Sun" />
-    </a>
-  </div>
-  <div class="planet mercury">
-    <a href="mercury" routerLink="/mercury" routerLinkActive="active">
-      <img src="../../../assets/images/planets/mercury.png" alt="Mercury" />
-    </a>
-  </div>
+
+
   <div class="planet venus">
     <a href="venus" routerLink="/venus" routerLinkActive="active">
       <img src="../../../assets/images/planets/venus.png" alt="Venus" />
@@ -52,9 +57,5 @@
       <img src="../../../assets/images/planets/uranus.png" alt="Uranus" />
     </a>
   </div>
-  <div class="planet neptune">
-    <a href="neptune" routerLink="/neptune" routerLinkActive="active">
-      <img src="../../../assets/images/planets/neptun.png" alt="Neptune" />
-    </a>
-  </div>
+
 </div>
