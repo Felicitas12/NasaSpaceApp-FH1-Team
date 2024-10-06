@@ -1,0 +1,32 @@
+.title {
+	color: white;
+	font-family: 'Josefin Sans', sans-serif;
+	align-items: center;
+	/* background-color: blue; */
+	width: 30%;
+	height: 20%;
+	margin: 2vh auto;
+	text-align: center;
+	padding: 2%;
+}
+
+.email {
+	text-align: left;
+}
+
+.repo {
+	text-align: right;
+}
+
+.line {
+	border: none;
+	height: 0.025vh;
+	background-color: white;
+	width: 50%;
+	margin: 2vh auto;
+	/* Вертикальные отступы и выравнивание по центру */
+}
+
+.contacts a {
+	color: white;
+}
