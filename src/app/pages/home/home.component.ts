@@ -14,6 +14,7 @@ import * as THREE from 'three';
 
 })
 export class HomeComponent implements OnInit{
+  sceneGraph = Experience;
 
   ngOnInit(): void {
 

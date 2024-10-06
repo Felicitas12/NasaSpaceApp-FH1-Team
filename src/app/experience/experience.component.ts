@@ -1,29 +1,64 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, viewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
-import { extend, injectBeforeRender } from 'angular-three';
+import {CUSTOM_ELEMENTS_SCHEMA, Component, viewChild, ElementRef, ChangeDetectionStrategy, Input,inject} from '@angular/core';
+import {extend, injectBeforeRender, NgtCanvas, NgtBeforeRenderEvent, NGT_STORE, NgtArgs} from 'angular-three';
 import { Mesh, BoxGeometry, MeshBasicMaterial } from 'three';
-
+import * as THREE from 'three';
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 extend({ Mesh, BoxGeometry, MeshBasicMaterial });
+extend(THREE);
+extend({ OrbitControls });
+
+
+@Component({
+  selector: 'demo-cube',
+  standalone: true,
+  template: `
+    <ngt-mesh
+        (beforeRender)="onBeforeRender($any($event))"
+        (click)="active = !active"
+        (pointerover)="hovered = true"
+        (pointerout)="hovered = false"
+        [scale]="active ? 1.5 : 1"
+        [position]="position"
+    >
+      <ngt-box-geometry />
+      <ngt-mesh-standard-material [color]="hovered ? 'darkred' : 'red'" />
+    </ngt-mesh>
+  `,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+})
+export class Cube {
+  @Input() position = [0, 0, 0];
+
+  active = false;
+  hovered = false;
+
+  onBeforeRender(event: NgtBeforeRenderEvent<THREE.Mesh>) {
+    event.object.rotation.x += 0.01;
+  }
+}
 
 @Component({
   standalone: true,
   template: `
-    <ngt-mesh #mesh>
-      <ngt-box-geometry />
-      <ngt-mesh-basic-material color="hotpink" />
-    </ngt-mesh>
+    <ngt-ambient-light [intensity]="0.5" />
+    <ngt-spot-light [position]="10" [angle]="0.15" [penumbra]="1" />
+    <ngt-point-light [position]="-10" />
+
+    <demo-cube [position]="[1.5, 0, 0]" />
+    <demo-cube [position]="[-1.5, 0, 0]" />
+
+    <ngt-orbit-controls *args="[camera, glDom]"(beforeRender)="$any($event).object.update()" />
   `,
+  imports: [Cube, NgtArgs],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Experience {
-  meshRef = viewChild.required<ElementRef<Mesh>>('mesh');
 
-  constructor() {
-    injectBeforeRender(({ delta }) => {
-      const mesh = this.meshRef().nativeElement;
-      mesh.rotation.x += delta;
-      mesh.rotation.y += delta;
-    })
-  }
+  readonly store = inject(NGT_STORE);
+
+  // stackblitz issue
+  readonly camera = (this.store as any).get('camera');
+  readonly glDom = (this.store as any).get('gl', 'domElement');
 }
+
 
