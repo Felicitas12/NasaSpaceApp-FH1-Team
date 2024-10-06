@@ -1,34 +1,54 @@
-.about-us-container {
-    display: flex;
-    align-items: flex-start;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  .image-container {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .text-container {
-    flex: 2;
-  }
-  
-  .text-container h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: red;
-  }
-  
-  .text-container p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: red;
-  }
-  
+content {
+  text-align: right;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  color: #FFFFFF;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Картинки зліва */
+.image-section {
+  flex: 1;
+  text-align: left;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 30px;
+}
+
+/* Текст праворуч від картинки */
+.text-section {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.description {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: left;
+  color: #F1F1F1;
+}
