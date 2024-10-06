@@ -1,13 +1,43 @@
 
 
 /* Заголовок по правому краю сверху */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Выровняем заголовок и стрелку по правому краю */
+}
+
 h1 {
-    text-align: right; /* Выровнять заголовок по правому краю */
-    color: white; /* Цвет заголовка */
-    margin: 5vh 2vw 0 0; /* Уменьшаем отступы сверху и снизу */
-    font-size: 4vw; /* Размер шрифта зависит от ширины окна просмотра */
+    text-align: right;
+    color: white;
+    margin: 5vh 0.3vw 0 0;
+    font-size: 4vw;
     font-family: 'Josefin Sans', sans-serif;
 }
+
+/* Стили для стрелки */
+.arrow-link {
+    display: inline-block;
+    margin-right: 0.5vw;
+    margin-top: 5vh;
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    border-bottom: 2px solid transparent; /* Добавляем прозрачное нижнее подчеркивание для анимации */
+    transition: border-color 0.3s ease; /* Эффект при наведении */
+    line-height: 0; 
+}
+.arrow-link:hover {
+    border-bottom: 2px solid white; /* Подчеркивание стрелки при наведении */
+}
+
+.arrow-img {
+    
+    transition: transform 0.3s ease; /* Эффект при наведении */
+}
+
+.arrow-img:hover {
+    transform: scale(1.2); /* Увеличиваем изображение при наведении */
+}
+
 
 /* Контейнер для двух колонок: левая с фото, правая с текстом */
 .content {
@@ -40,20 +70,19 @@ h1 {
     border: none; /* Убираем стандартную границу */
     height: 2px; /* Высота линии */
     background-color: rgb(175, 166, 166); /* Цвет линии */
-    margin: 2vh 0; /* Отступы сверху и снизу */
+    margin: 2vh; /* Отступы сверху и снизу */
     width: 20%; /* Ширина линии */
-    margin-right: 2vw; /* Отступ справа */
+    margin-right: 3vw; /* Отступ справа */
     margin-left: auto; /* Линия выровнена по правому краю */
 }
 /* Правая колонка с текстом */
 .right {
     font-family: 'Josefin Sans', sans-serif;
-
+    margin-right: 10vw;
     text-align: right; /* Выровнять текст по правому краю */
     color: #ccc; /* Светло-серый цвет для подзаголовка */
-    margin-right: 2vw; /* Отступ справа */
+    margin-right: 3vw; /* Отступ справа */
     font-size: 1.8vw; /* Относительный размер шрифта */
-    font-style: Robotic; /* Курсив для текста */
     margin-top: 1vh; /* Минимальный отступ сверху под заголовком */
     margin-bottom: 10vh; /* Явный отступ снизу */
     margin-left: 23vw; /* Отступ слева для текста */
