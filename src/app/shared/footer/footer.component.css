@@ -1,0 +1,31 @@
+.footer {
+	background-color: rgba(26, 25, 25, 255);
+	width: 30%;
+	height: 5%;
+	margin: auto;
+	position: center;
+	border-radius: 6vh 6vh 0 0;
+	color: white;
+	padding: 1%;
+	margin-bottom: 0;
+	padding-top: 2%;
+}
+
+a {
+	color: white;
+}
+
+.footer ol {
+	display: flex;
+	justify-content: space-around;
+	/* распределяет ссылки с равными отступами */
+	padding: 0;
+	margin: 0;
+}
+
+.footer li {
+	list-style-type: none;
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 0 5px;
+	/* можно добавить отступы между элементами */
+}
