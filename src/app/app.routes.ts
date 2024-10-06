@@ -3,11 +3,13 @@ import { Planet } from './models';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PlanetComponent } from './planet/planet.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
 
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'contacts', component: ContactsComponent },
   // { path: 'sun', component: SunComponent },
   // { path: 'mercury', component: MercuryComponent },
   // { path: 'venus', component: VenusComponent },
