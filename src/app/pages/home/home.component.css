@@ -27,3 +27,25 @@
 	float: left;
 	background-color: aqua;
 }
+
+.home-background {
+	height: 100%;
+	width: 100%;
+	background-image: url("/assets/images/space-background.jpg");
+	background-size: cover;
+	background-repeat: repeat;
+	/* Ensure seamless repeating */
+	animation: scrollBackground 15s linear infinite;
+
+}
+
+@keyframes scrollBackground {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 0 100%;
+		/* Slide vertically */
+	}
+}
