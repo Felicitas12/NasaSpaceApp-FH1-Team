@@ -1,54 +1,144 @@
-content {
-  text-align: right;
+nav {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  padding: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 3em;
-  font-weight: bold;
-  margin-bottom: 40px;
+  font-size: 48px;
   position: relative;
   display: inline-block;
-  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-h1::after {
+h2 {
+  text-align: right;
+  position: relative;
+  display: inline-block;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.text-right {
+  text-align: right;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 100%; 
+  height: 2px; 
+  background-color: white;
+}
+
+h3 {
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h3::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -10px;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
+  bottom: -5px;
+  width: 100%; 
+  height: 2px; 
+  background-color: white; 
 }
 
-.image-row {
+.about-section, .team-section {
+  margin-bottom: 5px;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.image-underline {
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+  margin: 10px auto;
+}
+
+.about-content, .team-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
 }
 
-/* Картинки зліва */
-.image-section {
-  flex: 1;
-  text-align: left;
-}
-
-.image-section img {
+.image-left, .image-right {
   width: 100%;
   max-width: 500px;
+  height: auto;
+}
+
+.text-right, .text-left {
+  width: 45%;
+  font-size: 24px;
+}
+
+.text-left ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.centered-image {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   border-radius: 30px;
 }
 
-/* Текст праворуч від картинки */
-.text-section {
-  flex: 1;
-  padding-left: 20px;
+ul {
+  padding: 0;
 }
 
-.description {
-  font-size: 1.2em;
-  line-height: 1.5;
-  text-align: left;
-  color: #F1F1F1;
+.text-left ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.text-left ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.text-left ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1;
 }
