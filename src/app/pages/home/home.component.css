@@ -68,45 +68,44 @@
 }
 
 .mercury-orbit {
-  width: 165px;
-  height: 100px;
-
-  position: relative;
-}
-
-.venus-orbit {
-  width: 245px;
+  width: 150px;
   height: 150px;
 }
 
+.venus-orbit {
+  width: 250px;
+  height: 250px;
+}
+
 .earth-orbit {
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
 }
 
 .mars-orbit {
-  width: 400px;
-  height: 250px;
+  width: 450px;
+  height: 450px;
 }
 
 .jupiter-orbit {
   width: 550px;
-  height: 350px;
+  height: 550px;
 }
 
 .saturn-orbit {
-  width: 700px;
-  height: 450px;
+  width: 650px;
+  height: 650px;
 }
 
 .uranus-orbit {
-  width: 800px;
-  height: 500px;
+  width: 750px;
+  height: 750px;
 }
 
 .neptune-orbit {
-  width: 900px;
-  height: 550px;
+  width: 850px;
+  height: 850px;
+
 }
 
 .planet {
@@ -121,31 +120,10 @@
   animation: moveAlongEllipse 5s infinite linear; /* Время, направление и повторение анимации */
   transform: translate(-50%, -50%); /* Центрирование изображения */
 }
-@keyframes moveAlongEllipse {
-  0% {
-    left: 50%; /* Начальная позиция в центре по горизонтали */
-    top: 0%;   /* Начальная позиция вверху эллипса */
-  }
-  25% {
-    left: 100%; /* Переход к правому краю эллипса */
-    top: 50%;   /* Спуск вниз к середине эллипса */
-  }
-  50% {
-    left: 50%; /* Переход к нижнему краю эллипса */
-    top: 100%; /* Внизу эллипса */
-  }
-  75% {
-    left: 0%; /* Переход к левому краю эллипса */
-    top: 50%; /* Подъем вверх к середине эллипса */
-  }
-  100% {
-    left: 50%; /* Возвращение в центр по горизонтали */
-    top: 0%;   /* Возвращение вверх к начальной позиции */
-  }
-}
+
 .venus {
   top: 50%;
-  left: 92%;
+  left: 94%;
   width: 30px;
   height: 30px;
 }
@@ -179,20 +157,31 @@
 }
 
 .uranus {
-  top: 63%;
-  left: 94.5%;
+  top: 53%;
+  left: 95%;
   rotate: 80deg;
   width: 40px;
   height: 40px;
+  transform-origin: -355px 0;
+  animation: rotate 10s linear infinite;
 }
 
 .neptune {
-  top: 67%;
-  left: 93.5%;
+  top: 52%;
+  left: 100%;
   width: 40px;
   height: 40px;
+  transform-origin: -405px 0;
+  animation: rotate 5s linear infinite;
 }
-
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 @keyframes orbit {
   0% {}
 
