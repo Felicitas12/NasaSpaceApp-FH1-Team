@@ -113,47 +113,57 @@
 }
 
 .mercury {
-  top: 50%;
-  left: 55%;
+  top: 55%;
+  left: 100%;
   width: 20px;
   height: 20px;
-  animation: moveAlongEllipse 5s infinite linear; /* Время, направление и повторение анимации */
-  transform: translate(-50%, -50%); /* Центрирование изображения */
+  transform-origin: -65px 0;
+  animation: rotate 1.44s linear infinite;
 }
 
 .venus {
-  top: 50%;
-  left: 94%;
+  top: 55%;
+  left: 100%;
   width: 30px;
   height: 30px;
+  transform-origin: -110px 0;
+  animation: rotate 1.94s linear infinite;
 }
 
 .earth {
-  top: 50%;
-  left: 95%;
+  top: 54%;
+  left: 100%;
   width: 30px;
   height: 30px;
+  transform-origin: -160px 0;
+  animation: rotate 2.29s linear infinite;
 }
 
 .mars {
-  top: 54%;
-  left: 96%;
+  top: 52%;
+  left: 100%;
   width: 25px;
   height: 25px;
+  transform-origin: -212.5px 0;
+  animation: rotate 2.82s linear infinite;
 }
 
 .jupiter {
-  top: 55%;
-  left: 94%;
+  top: 53.5%;
+  left: 100%;
   width: 50px;
   height: 50px;
+  transform-origin: -250px 0;
+  animation: rotate 5.21s linear infinite;
 }
 
 .saturn {
-  top: 59%;
-  left: 95%;
+  top: 53%;
+  left: 100%;
   width: 45px;
   height: 45px;
+  transform-origin: -302.5px 0;
+  animation: rotate 7.03s linear infinite;
 }
 
 .uranus {
@@ -172,7 +182,7 @@
   width: 40px;
   height: 40px;
   transform-origin: -405px 0;
-  animation: rotate 5s linear infinite;
+  animation: rotate 12.54s linear infinite;
 }
 @keyframes rotate {
   from {
