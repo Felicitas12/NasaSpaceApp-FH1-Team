@@ -3,15 +3,29 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	background-color: black;
+	overflow: hidden;
+	/* Prevent scroll bars */
 }
 
-body {
-	/*background-image: url('https://media.istockphoto.com/id/1732963074/photo/starry-night-sky-in-space.jpg?s=612x612&w=0&k=20&c=AHcmpswk3g3toHSFt5yCV_1uzMZUaJl95p3UIgm8euo=');
-*/
+.home-background {
+	height: 100%;
+	width: 100%;
 	background-image: url("/assets/images/space-background.jpg");
 	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	/*ffdf*/
+	background-repeat: repeat;
+	/* Ensure seamless repeating */
+	animation: scrollBackground 15s linear infinite;
+
+}
+
+@keyframes scrollBackground {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 0 100%;
+		/* Slide vertically */
+	}
 }
